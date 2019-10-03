@@ -32,13 +32,22 @@ function draw_traj(data, svg, width, height, cs, cla) {
         let g = svg.select('.traj');
 
 
-        g.append("path")
+        let tbg = g.append("path")
             .data([data])
             .attr("d", line)
             .attr('stroke', '#fff')
             .attr('class', 'traj_bg')
             .style('stroke-width', '7px')
             .style("fill", "none");
+
+
+        let ttotalLength = tbg.node().getTotalLength();
+
+        tbg.attr("stroke-dasharray", ttotalLength + " " + ttotalLength)
+            .attr("stroke-dashoffset", ttotalLength)
+            .transition()
+            .duration(6500)
+            .attr("stroke-dashoffset", 0)
 
         let tpath = g.append("path")
             .data([data])
@@ -85,7 +94,7 @@ function draw_traj(data, svg, width, height, cs, cla) {
         tpath.attr("stroke-dasharray", totalLength + " " + totalLength)
             .attr("stroke-dashoffset", totalLength)
             .transition()
-            .duration(4500)
+            .duration(3500)
             .attr("stroke-dashoffset", 0)
     }
 

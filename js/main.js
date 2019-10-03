@@ -16,7 +16,8 @@ let mains = [];
 let selecs_list = ['rest0', 'rest1'];
 let selecs = [];
 let can = d3.select('#input');
-
+let slticks = -1;
+let keymap = {};
 
 let area = d3.line()
     .x(function (d) {
@@ -129,6 +130,30 @@ function load_data(data, index) {
     stepIm()
 }
 
+
+function manege() {
+
+    curStep += 1;
+
+
+    if (!tdata.hiddens[start + curStep]) {
+        curStep = 0;
+    }
+
+
+    up_curtxt(curStep, tdata.hiddens.length - 1);
+    let tbar = $('#timebar');
+    tbar.val(curStep);
+    stepIm();
+    update_time();
+    show_current(tool[0], (hst - 10) + (ve_w / 2), -10, curStep);
+    show_sel(curStep);
+    draw_agent_path(tool[0], tdata.positions[start + curStep], tdata.orientations[start + curStep]);
+    update_bars(tool[0], tdata.probabilities[start + curStep]);
+    d3.selectAll('.item').moveToFront()
+
+
+}
 
 function step() {
 
@@ -483,3 +508,29 @@ function resetelems() {
     tool[0].selectAll('.hiddensgrp rect[order]').transition().duration(900).style('opacity', '1');
 }
 
+
+onkeydown = function (e) {
+    e = e || event;
+    keymap[e.keyCode] = e.type === 'keydown';
+    if (keymap[39] || keymap[32]) {
+        e.preventDefault();
+        slticks += 1;
+
+        what(slticks)
+
+    }
+    else if (keymap[37] || keymap[13]) {
+        e.preventDefault();
+        if (slticks >= 0) {
+            slticks -= 1;
+            whut(slticks)
+        }
+    }
+};
+
+
+onkeyup = function (e) {
+    if (e.keyCode in keymap) {
+        keymap[e.keyCode] = false;
+    }
+};

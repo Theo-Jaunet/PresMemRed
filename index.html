@@ -13,17 +13,19 @@
     Reducing this memory could help the player learning to complete its task and thus lower both its training time and energy consumption footprint.">
     <meta property="og:image" content="https://theo-jaunet.github.io/MemoryReduction/assets/screenshot.png">
 
-   <!-- Global site tag (gtag.js) - Google Analytics -->	
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105697527-4"></script>	
-    <script>	
-        window.dataLayer = window.dataLayer || [];	
-        function gtag() {	
-            dataLayer.push(arguments);	
-        }	
-        gtag('js', new Date());	
-        gtag('config', 'UA-105697527-4');	
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105697527-4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-105697527-4');
     </script>
-    
+
     <!-- Mobile Specific Metas
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -47,11 +49,15 @@
 
 </head>
 <body>
+<div style="position: absolute; min-width: 1245px; margin-left: auto;margin-right: auto;left: 0;right: 0;max-width: 1500px" id="intro">
 
+    <img src="assets/intro.svg" style="width: 100%; height: auto">
+
+</div>
 
 <!-- Primary Page Layout
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<div class="container" style="position: relative; min-width: 1245px;padding: 0;">
+<div class="container" style="position: relative; min-width: 1245px;padding: 0; visibility: hidden" id="fig_main" >
 
 
     <div style="width: 35px;height: auto;display: inline-block;margin-right: 20px;position: absolute;left: 515.7px;top: 122px;z-index: 50">
@@ -72,8 +78,8 @@
                 Reducing the size of the memory <img src="assets/red.png" class="arrow-icon">, could help the player learning to complete its task and thus lower its training time and energy consumption footprint.
 
                 In this scenario, the player has to gather items in a specific order: Green Armor <img src="assets/armorGreen.png"
-                                                                                                           class="item-icon" height="57px"> <img
-                        src="assets/arrow.png" class="arrow-icon"> Red Armor
+                                                                                                       class="item-icon" height="57px"> <img
+                    src="assets/arrow.png" class="arrow-icon"> Red Armor
                 <img src="assets/armorRed.png" class="item-icon"> <img src="assets/arrow.png" class="arrow-icon"> Health
                 Pack <img src="assets/hp.png" class="item-icon"> <img src="assets/arrow.png" class="arrow-icon">
                 Soul-sphere <img src="assets/soul.png" class="item-icon" style="width: 16px"> , with the
@@ -128,7 +134,7 @@
 </div>
 
 
-<div class="container" style="min-width: 1200px;text-align: center">
+<div class="container" style="min-width: 1200px;text-align: center;visibility: hidden">
 
     <div class=" row" id="scrolltxt" style="text-align: center;margin-top: 550px">
         <div class=" twelve columns" style="margin-top: 15%;display: inline-block">
@@ -233,7 +239,9 @@
         <div class="twelve columns" style="margin-top: 2%;display: inline-block">
             <div style=" text-align: left;width: 800px;margin-bottom: 50px;display: inline-block">
                 <h4>Implementation</h4>
-                <p> This project uses the JavaScript library <a href="https://d3js.org/">d3</a> to display data extracted from the Deep Reinforcement Learning model implemented in Python using <a href="https://pytorch.org/">PyTorch</a>. The video game DOOM is simulated with <a href="http://vizdoom.cs.put.edu.pl/">ViZDoom</a>. In addition, this project uses our previous work DRLViz (<a href="https://github.com/sical/drlviz">GitHub</a>, <a href="https://sical.github.io/drlviz/">demo</a>, <a href="https://arxiv.org/abs/1909.02982v1">paper</a>) to analyse
+                <p> This project uses the JavaScript library <a href="https://d3js.org/">d3</a> to display data extracted from the Deep Reinforcement Learning model implemented in Python using <a href="https://pytorch.org/">PyTorch</a>. The
+                    video game DOOM is simulated with <a href="http://vizdoom.cs.put.edu.pl/">ViZDoom</a>. In addition, this project uses our previous work DRLViz (<a href="https://github.com/sical/drlviz">GitHub</a>, <a
+                            href="https://sical.github.io/drlviz/">demo</a>, <a href="https://arxiv.org/abs/1909.02982v1">paper</a>) to analyse
                     and generate episodes. For more information on this project, please feel free to visit our <a href="https://github.com/Theo-Jaunet/MemoryReduction">GitHub</a>. </p>
 
             </div>
@@ -245,7 +253,8 @@
         <div class="twelve columns" style="margin-top: 2%;display: inline-block">
             <div style=" text-align: left;width: 800px;margin-bottom: 50px;display: inline-block">
                 <h5>Authors</h5>
-                <p><a href="https://theo-jaunet.github.io/">Théo Jaunet</a>, <a href="http://romain.vuillemot.net/">Romain Vuillemot</a> (<a href="https://twitter.com/romsson">@romsson</a>) and <a href="https://perso.liris.cnrs.fr/christian.wolf/">Christian Wolf </a>(<a href="https://twitter.com/chriswolfvision">@chriswolfvision</a>), at LIRIS lab Lyon - France.</p>
+                <p><a href="https://theo-jaunet.github.io/">Théo Jaunet</a>, <a href="http://romain.vuillemot.net/">Romain Vuillemot</a> (<a href="https://twitter.com/romsson">@romsson</a>) and <a
+                        href="https://perso.liris.cnrs.fr/christian.wolf/">Christian Wolf </a>(<a href="https://twitter.com/chriswolfvision">@chriswolfvision</a>), at LIRIS lab Lyon - France.</p>
                 This work takes place in Théo jaunet's Ph.D. which is supported by a French Ministry Fellowship and the <a href="https://projet.liris.cnrs.fr/mi2/"> M2I project</a>,
             </div>
 
@@ -263,5 +272,6 @@
 <script src="js/distributionV2.js"></script>
 <script src="js/trajectory.js"></script>
 <script src="js/stage.js"></script>
+<script src="js/slidemode.js"></script>
 <script src="js/main.js"></script>
 </html>
