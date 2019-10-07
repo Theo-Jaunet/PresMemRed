@@ -72,6 +72,7 @@ function what(tick) {
             update_stage('4');
             $('.selected').toggleClass('selected');
             $('.nav[index=4]').toggleClass('selected');
+            $('#credits').css('visibility', 'visible');
             break;
         case 20:
             meta_change('diy/red0_-1.json', [0, -1]);
