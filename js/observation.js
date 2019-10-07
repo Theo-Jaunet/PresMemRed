@@ -3,7 +3,7 @@ function drawModel(svg, height) {
 
     $('#model').remove();
     svg.append("svg:image")
-        .attr('x', 288)
+        .attr('x', 348)
         .attr('y', height - 177)
         .attr('width', 360 * 1.22)
         .attr('height', 160 * 1.22)

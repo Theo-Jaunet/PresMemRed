@@ -4,6 +4,16 @@
     stroke: #e2d509 !important;
 }
 
+#fig_main::-webkit-scrollbar {
+    display: none;
+}
+
+#fig_main::-webkit-scrollbar { width: 0 !important }
+
+#fig_main {
+    scrollbar-width: none;
+}
+
 .hoverable {
 
     background-image: linear-gradient(to right, rgba(30, 174, 219, 1) 33%, rgba(30, 74, 219, 0) 0%);
@@ -44,14 +54,14 @@ a {
 }
 
 .item-icon {
-    width: 21px;
-    height: 16px;
+    width: 50px;
+    height: 38px;
 }
 
 .arrow-icon {
-    width: 20px;
+    width: 30px;
     height: auto;
-    margin-bottom: 0px;
+    margin-bottom: 7px;
 }
 
 .traj-sel {

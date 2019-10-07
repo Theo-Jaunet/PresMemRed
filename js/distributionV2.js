@@ -16,9 +16,9 @@ function bars_init(svg, width, height) {
     g.selectAll('.bar').data([0, 0, 0, 0, 0]).enter()
         .append('rect')
         .attr('class', 'bar')
-        .attr('x', 775)
+        .attr('x', 820)
         .attr('y', (d, i) => {
-                draw_arrow(757, st + (i * v_space) + (i * bheight), or[i], i);
+                draw_arrow(800, st + (i * v_space) + (i * bheight), or[i], i);
                 return st + (i * v_space) + (i * bheight)
             }
         )

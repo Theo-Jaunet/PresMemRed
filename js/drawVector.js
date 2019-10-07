@@ -113,9 +113,9 @@ function show_sel(step) {
 
     $('.ht' + step).toggleClass('hsel');
 
-    d3.selectAll('.hsel rect').style('stroke-width', '2.2px')
+    d3.selectAll('.hsel rect').style('stroke-width', '2.2px');
     let st = [hst + (ve_w * curStep + (0.02 * curStep)), (tdata.hiddens[0].length * ve_h) + 22];
-    d3.select('#nlink').attr('points', "658," + (tool[2] - 117) + ",675," + (tool[2] - 117) + ", " + (st[0] + ve_w + 1.5) + "," + (st[1] + 10) + ", " + (st[0] + ve_w) + "," + (st[1]) + "," + (st[0]) + "," + st[1] + ", " + (st[0] - 1.5) + "," + (st[1] + 10))
+    d3.select('#nlink').attr('points', "718," + (tool[2] - 117) + ",736," + (tool[2] - 117) + ", " + (st[0] + ve_w + 1.5) + "," + (st[1] + 10) + ", " + (st[0] + ve_w) + "," + (st[1]) + "," + (st[0]) + "," + st[1] + ", " + (st[0] - 1.5) + "," + (st[1] + 10))
 }
 
 
@@ -226,13 +226,13 @@ function link_model(svg, data) {
         .attr('id', 'nlink')
         .style("fill", "#233E34")
         .style('stroke-width', '0px')
-        .attr("points", "685," + (tool[2] - 117) + ",698," + (tool[2] - 117) + ", " + (st[0] + ve_w + 4.5) + "," + (st[1] + 10) + ", " + (st[0] + ve_w) + "," + (st[1]) + "," + (st[0]) + "," + st[1] + ", " + (st[0]) + "," + (st[1] + 10));
+        .attr("points", "685," + (tool[2] - 117) + ",698," + (tool[2] - 117) + ", " + (st[0] + ve_w + 84.5) + "," + (st[1] + 10) + ", " + (st[0] + ve_w) + "," + (st[1]) + "," + (st[0]) + "," + st[1] + ", " + (st[0]) + "," + (st[1] + 10));
 
 
     svg.append('line')
-        .attr('x1', 232)
-        .attr('x2', 305)
-        .attr('y1', 503)
+        .attr('x1', 302)
+        .attr('x2', 355)
+        .attr('y1', 459)
         .attr('y2', tool[2] - 115)
         .attr('stroke', '#555555')
         .attr('stroke-dasharray', "4,2")
@@ -240,9 +240,9 @@ function link_model(svg, data) {
 
 
     svg.append('line')
-        .attr('x1', 232)
-        .attr('x2', 305)
-        .attr('y1', 643.5)
+        .attr('x1', 302)
+        .attr('x2', 355)
+        .attr('y1', 642.5)
         .attr('y2', tool[2] - 54)
         .attr('stroke', '#555555')
         .attr('stroke-dasharray', "4,2")

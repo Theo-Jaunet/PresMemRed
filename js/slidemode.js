@@ -141,10 +141,10 @@ function whut(tick) {
             meta_switch(3);
             break;
         case 12:
-            resetelems()
+            resetelems();
             break;
         case 13:
-            highelems([8, 29, 12, 25, 11, 7, 15, 24])
+            highelems([8, 29, 12, 25, 11, 7, 15, 24]);
             break;
         case 14:
             update_stage('3');

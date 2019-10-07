@@ -41,7 +41,7 @@ d3.json("data/main/res.json").then(function (data) {
         d3.selectAll('.item').moveToFront();
     });
     mains[0] = tdata;
-    draw_arrowV2(380, 500, 180, -1);
+    draw_arrowV2(400, 500, 180, -1);
     moreInf(20, 20, 180);
     loadim(mains[0], 'main/images/main.jpg');
 
@@ -71,7 +71,7 @@ function load_data(data, index) {
     if (curStep > tdata.hiddens.length - 1) {
         curStep = tdata.hiddens.length - 1
     }
-    ve_init_rows(tool[0], tdata.hiddens, 633, 811, tdata.mask, index);
+    ve_init_rows(tool[0], tdata.hiddens, 643, 821, tdata.mask, index);
     $('.traj-sel').toggleClass('traj-sel');
     draw_traj(tdata.positions, tool[0], traj_s, traj_s, false, 'sec-traj traj-sel');
     update_bars(tool[0], tdata.probabilities[start + curStep]);
@@ -236,7 +236,7 @@ function reportWindowSize() {
     tool[1] = tbbox.width;
     tool[2] = tbbox.height;
 
-    let traj_s = ((510 * tbbox.width) / 1300);
+    let traj_s = ((560 * tbbox.width) / 1300);
 
     $('.traj').remove();
     $('.distrib').remove();
@@ -251,7 +251,7 @@ function reportWindowSize() {
     bars_init(tool[0], tool[1], tool[2]);
     update_bars(tool[0], tdata.probabilities[start]);
 
-    ve_init_rows(tool[0], tdata.hiddens, 633, 811, tdata.mask, -1);
+    ve_init_rows(tool[0], tdata.hiddens, 643, 821, tdata.mask, -1);
 
     draw_border(tool[0], tdata.hiddens);
 
@@ -352,7 +352,7 @@ function draw_arrowV2(x, y, z, ind) {
 
     tool[0].append('rect')
         .attr('x', x - 12)
-        .attr('y', 275)
+        .attr('y', 205)
         .attr('width', '13')
         .attr('height', '13')
         .attr('stroke-width', '0.5')
@@ -362,8 +362,23 @@ function draw_arrowV2(x, y, z, ind) {
 
     tool[0].append('text')
         .attr('x', x + 22)
-        .attr('y', 286)
+        .attr('y', 216)
         .text('Human');
+
+
+    tool[0].append('rect')
+        .attr('x', x - 12)
+        .attr('y', 265)
+        .attr('width', '13')
+        .attr('height', '13')
+        .attr('stroke-width', '0.5')
+        .attr('stroke', 'rgb(85, 85, 85)')
+        .attr('fill', '#e2d509');
+
+    tool[0].append('text')
+        .attr('x', x + 22)
+        .attr('y', 276)
+        .text('Full Memory');
 
 
     tool[0].append('rect')
@@ -373,48 +388,33 @@ function draw_arrowV2(x, y, z, ind) {
         .attr('height', '13')
         .attr('stroke-width', '0.5')
         .attr('stroke', 'rgb(85, 85, 85)')
-        .attr('fill', '#e2d509');
-
-    tool[0].append('text')
-        .attr('x', x + 22)
-        .attr('y', 336)
-        .text('Full Memory');
-
-
-    tool[0].append('rect')
-        .attr('x', x - 12)
-        .attr('y', 375)
-        .attr('width', '13')
-        .attr('height', '13')
-        .attr('stroke-width', '0.5')
-        .attr('stroke', 'rgb(85, 85, 85)')
         .attr('fill', '#ff5000');
 
     tool[0].append('text')
         .attr('x', x + 22)
-        .attr('y', 386)
+        .attr('y', 336)
         .text('Current');
 
 
     tool[0].append('text')
-        .attr('x', 100)
+        .attr('x', 135)
         .attr('y', 660)
         .text('Input');
 
 
     tool[0].append('text')
-        .attr('x', x - 22)
+        .attr('x', x +30)
         .attr('y', 650)
         .text('Image Processing');
 
 
     tool[0].append('text')
-        .attr('x', x + 260)
+        .attr('x', x + 300)
         .attr('y', 650)
         .text('Memory');
 
     tool[0].append('text')
-        .attr('x', x + 372)
+        .attr('x', x + 402)
         .attr('y', 660)
         .text('Output');
 }

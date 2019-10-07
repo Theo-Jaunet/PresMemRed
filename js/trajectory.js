@@ -1,6 +1,6 @@
 let mapx, mapy, traj_x, traj_y;
 let offx = -6;
-let offy = 90;
+let offy = -10;
 let agent;
 
 function traj_init(width, height) {
@@ -47,7 +47,7 @@ function draw_traj(data, svg, width, height, cs, cla) {
             .attr("stroke-dashoffset", ttotalLength)
             .transition()
             .duration(6500)
-            .attr("stroke-dashoffset", 0)
+            .attr("stroke-dashoffset", 0);
 
         let tpath = g.append("path")
             .data([data])
@@ -194,18 +194,18 @@ function draw_walls(svg, offx, offy) {
 
     g.append('line')
         .attr('x1', 0 + offx)
-        .attr('x2', 345.7 + offx)
-        .attr('y1', 107.5 + offy)
-        .attr('y2', 107.5 + offy)
+        .attr('x2', 379.2 + offx)
+        .attr('y1', 115.5 + offy)
+        .attr('y2', 115.5 + offy)
         .attr('stroke', '#555555')
         .attr('stroke-width', '8')
         .attr("stroke-linejoin", "round");
 
     g.append('line')
         .attr('x1', 6 + offx)
-        .attr('x2', 345.7 + offx)
-        .attr('y1', 399 + offy)
-        .attr('y2', 399 + offy)
+        .attr('x2', 379.2 + offx)
+        .attr('y1', 438 + offy)
+        .attr('y2', 438 + offy)
         .attr('stroke', '#555555')
         .attr('stroke-width', '8')
         .attr("stroke-linejoin", "round");
