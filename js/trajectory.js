@@ -160,8 +160,8 @@ function place_items(svg, st) {
 
     g.append("text")
         .attr('x', traj_x(st[0]) + offx - 18)
-        .attr('y', traj_y(st[1]) + offy - 18)
-        .attr('font-size', '12pt')
+        .attr('y', traj_y(st[1]) + offy - 22)
+        .attr('font-size', '16pt')
         .style('opacity', '0.8')
         .text('Start')
         .attr('class', 'item')

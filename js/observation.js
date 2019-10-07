@@ -3,10 +3,10 @@ function drawModel(svg, height) {
 
     $('#model').remove();
     svg.append("svg:image")
-        .attr('x', 348)
-        .attr('y', height - 177)
-        .attr('width', 360 * 1.22)
-        .attr('height', 160 * 1.22)
+        .attr('x', 358)
+        .attr('y', height - 187)
+        .attr('width', 360 * 1.36)
+        .attr('height', 160 * 1.36)
         .attr('id', 'model')
         .attr("xlink:href", 'assets/DRL2.svg');
 

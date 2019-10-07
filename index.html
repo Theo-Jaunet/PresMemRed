@@ -62,16 +62,9 @@
 <div class="container" style="position: relative; min-width: 1245px;padding: 0; visibility: hidden;  scrollbar-width: none;height: 1000px;overflow-y: hidden" id="fig_main">
 
 
-    <div style="width: 35px;height: auto;display: inline-block;margin-right: 20px;position: absolute;left: 515.7px;top: 122px;z-index: 50">
-        <!--<img class="play" style="width: 29px;position: absolute;left: 90px;top:-53px" src="assets/play-sign.svg">-->
-        <input id="timebar" type="range" min="0" max="66" step="1" value="0"
-               style="width: 308.5px;position: absolute;top: -6px;left: 11.9px">
-        <p id="stepctn"
-           style="position: absolute;display: inline-block;left: 145px;width: 88px;top: -50px;user-focus: none;user-select: none">
-            Step --/--</p>
-    </div>
-    <div class="row" style="margin-top: 12px">
-        <div class="five  columns" style="position: relative">
+
+    <div class="row" style="margin-top: 12px;max-width: 1600px">
+        <div class="seven  columns" style="position: relative;width: 650px">
             <h5> What if we Reduce the Memory of an Artificial Doom Player?</h5>
 
             <div>
@@ -80,7 +73,7 @@
             </div>
 
 
-            <p style="max-height: 100px;width: 490px;margin-top: 10%;margin-left: 5%">
+            <p id="order" style="max-height: 100px;width: 490px;margin-top: 10%;margin-left: 157.5px">
 
 
                 <img src="assets/armorGreen.png" class="item-icon" height="57px"> <img src="assets/arrow.png" class="arrow-icon">
@@ -91,37 +84,45 @@
             </p>
 
         </div>
-        <div class="seven columns">
-            <div class=" nav left-card-arr button" style="    vertical-align: bottom;"><p style="padding: 13px 0px"> < </p></div>
+        <div class="five columns" style="margin-left: -6px; width: 600px">
+            <div class=" nav left-card-arr button" style="display:none; vertical-align: bottom;"><p style="padding: 13px 0px"> < </p></div>
             <div index="0" class=" nav selected card button"><p> Full Memory <br> (no reduction) </p></div>
             <div index="1" class=" nav card button"><p>Random <br> Reductions</p></div>
             <div index="2" class=" nav card button"><p>Top Elements <br> only</p></div>
             <div index="3" class=" nav card button"><p>Selection of <br> Reductions</p></div>
             <div index="4" class=" nav card button"><p>Do it <br>Yourself</p></div>
-            <div class=" nav right-card-arr button"><p style="padding: 13px 0px;font-weight: 700"> > </p></div>
+            <div class=" nav right-card-arr button" style="display:none;"><p style="padding: 13px 0px;font-weight: 700"> > </p></div>
         </div>
     </div>
     <div style="width: 360px;position: absolute;right: 22px;top: 86px">
-        <h5 style="width: 100%" id="card_title"> Full Memory</h5>
+        <!--<h5 style="width: 100%;margin-left: 85px" id="card_title"> Full Memory</h5>-->
         <!--<p id="card_txt" style="margin-top: -11px;width: 100%">-->
         <!--</p>-->
         <!--<svg id="sco" style="width: 150px;height: 150px;position: absolute;right: 109px;bottom: -160px;z-index: 777;visibility:hidden"></svg>-->
         <!--<div id="nextarr" onclick="$('.right-card-arr').trigger('click')"-->
         <!--style="cursor:pointer;position: absolute;right: 28px;bottom: 12px;z-index: 777"><a>Next <img src="assets/arrow.png" class="arrow-icon"> </a>-->
         <!--</div>-->
-        <div id="credits" style="visibility: hidden;margin-top: 100px">
+        <div id="credits" style="visibility: hidden;margin-top: 100px;margin-left: 100px">
             <h5> <span style="text-decoration:underline">Théo Jaunet</span><br>LIRIS, INSA-Lyon (France) </h5>
-            <h5>Romain Vuillemot<br>LIRIS, Ecole centrale de Lyon (France) </h5>
+            <h5>Romain Vuillemot<br>LIRIS, Ecole Centrale de Lyon (France) </h5>
             <h5>Christian Wolf<br>LIRIS, INSA-Lyon, CITI, INRIA (France) </h5>
         </div>
 
     </div>
 
-    <div class=" row" style="max-height: 665px;position: absolute;top:120px">
+    <div class=" row" style="max-height: 665px;position: absolute;top:120px;text-align: center;margin-left: auto;margin-right: auto;left: 0;right: 0" id="svg_div">
 
+    <div style="width: 35px;height: auto;display: inline-block;margin-right: 20px;position: absolute;left: 515.7px;top: 1.6px;z-index: 50;margin-left: 122.5px" id="inf">
+        <!--<img class="play" style="width: 29px;position: absolute;left: 90px;top:-53px" src="assets/play-sign.svg">-->
+        <input id="timebar" type="range" min="0" max="66" step="1" value="0"
+               style="width: 407.5px;position: absolute;top: -6px;left: 11.9px">
+        <p id="stepctn"
+           style="position: absolute;display: inline-block;left: 170px;width: 88px;top: -50px;user-focus: none;user-select: none">
+            Step --/--</p>
+    </div>
         <div>
             <canvas id="input" style="position: absolute;bottom: 18px;width: 331.5px;height: 188.5px"></canvas>
-            <svg class="" id="svg-tool" style="height: 663px;width: 850px !important;">
+            <svg class="" id="svg-tool" style="height: 663px;width: 1000px !important;">
                 <defs>
                     <filter id="brightness">
                         <feComponentTransfer>

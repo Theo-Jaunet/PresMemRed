@@ -24,7 +24,7 @@ function ve_init_rows(svg, data, height, width, mask, elem) {
 
     let g = svg.append('g').attr('class', 'hiddensgrp').attr('id', 'hiddensgrp');
 
-    ve_h = Math.min(((height - 151) / data[0].length), 60);
+    ve_h = Math.min(((height - 165) / data[0].length), 60);
     ve_w = Math.min((width - (hst-7)) / data.length, 13);
 
     for (let w = 0; w < data.length; w++) {
@@ -115,7 +115,7 @@ function show_sel(step) {
 
     d3.selectAll('.hsel rect').style('stroke-width', '2.2px');
     let st = [hst + (ve_w * curStep + (0.02 * curStep)), (tdata.hiddens[0].length * ve_h) + 22];
-    d3.select('#nlink').attr('points', "718," + (tool[2] - 117) + ",736," + (tool[2] - 117) + ", " + (st[0] + ve_w + 1.5) + "," + (st[1] + 10) + ", " + (st[0] + ve_w) + "," + (st[1]) + "," + (st[0]) + "," + st[1] + ", " + (st[0] - 1.5) + "," + (st[1] + 10))
+    d3.select('#nlink').attr('points', "770," + (tool[2] - 121) + ",791," + (tool[2] - 121) + ", " + (st[0] + ve_w + 1.5) + "," + (st[1] + 10) + ", " + (st[0] + ve_w) + "," + (st[1]) + "," + (st[0]) + "," + st[1] + ", " + (st[0] - 1.5) + "," + (st[1] + 10))
 }
 
 
@@ -231,7 +231,7 @@ function link_model(svg, data) {
 
     svg.append('line')
         .attr('x1', 302)
-        .attr('x2', 355)
+        .attr('x2', 365)
         .attr('y1', 459)
         .attr('y2', tool[2] - 115)
         .attr('stroke', '#555555')
@@ -241,9 +241,9 @@ function link_model(svg, data) {
 
     svg.append('line')
         .attr('x1', 302)
-        .attr('x2', 355)
+        .attr('x2', 365)
         .attr('y1', 642.5)
-        .attr('y2', tool[2] - 54)
+        .attr('y2', tool[2] - 50)
         .attr('stroke', '#555555')
         .attr('stroke-dasharray', "4,2")
         .attr('stroke-width', '1');

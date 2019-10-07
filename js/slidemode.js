@@ -69,10 +69,14 @@ function what(tick) {
             meta_switch(1);
             break;
         case 19:
+            d3.select('#svg_div').transition().duration(300).style('left', '-230px')
+            d3.select('#inf').transition().duration(300).style('left', '630.2px')
+            d3.select('#order').transition().duration(300).style('margin-left', '43.5px')
+            $('#credits').css('visibility', 'visible');
             update_stage('4');
             $('.selected').toggleClass('selected');
             $('.nav[index=4]').toggleClass('selected');
-            $('#credits').css('visibility', 'visible');
+
             break;
         case 20:
             meta_change('diy/red0_-1.json', [0, -1]);
@@ -94,8 +98,8 @@ function whut(tick) {
             $('#fig_main').css('visibility', 'hidden');
             break;
         case 0:
-            clearInterval(timer)
-            timer = null
+            clearInterval(timer);
+            timer = null;
             break;
         case 1:
             resetelems();
@@ -162,6 +166,10 @@ function whut(tick) {
             highelems([8, 29, 12, 25, 11, 7, 15, 24, 21, 5, 10, 3, 0]);
             break;
         case 18:
+            d3.select('#svg_div').transition().duration(300).style('left', '0')
+            d3.select('#inf').transition().duration(400).style('left', '515.7px')
+            d3.select('#order').transition().duration(400).style('margin-left', '146.5px')
+            $('#credits').css('visibility', 'hidden');
             update_stage('3');
             $('.selected').toggleClass('selected');
             $('.nav[index=3]').toggleClass('selected');
