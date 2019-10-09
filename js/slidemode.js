@@ -69,9 +69,9 @@ function what(tick) {
             meta_switch(1);
             break;
         case 19:
-            d3.select('#svg_div').transition().duration(300).style('left', '-230px')
-            d3.select('#inf').transition().duration(300).style('left', '630.2px')
-            d3.select('#order').transition().duration(300).style('margin-left', '43.5px')
+            d3.select('#svg_div').transition().duration(300).style('left', '-230px');
+            d3.select('#inf').transition().duration(300).style('left', '630.2px');
+            d3.select('#order').transition().duration(300).style('margin-left', '43.5px');
             $('#credits').css('visibility', 'visible');
             update_stage('4');
             $('.selected').toggleClass('selected');
