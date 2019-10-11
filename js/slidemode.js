@@ -15,6 +15,9 @@ function what(tick) {
             break;
         case 3:
             meta_change('diy/red28_-1.json', [28, -1]);
+            $('.traj path').css('stroke-width','0.3px')
+            $('.hum').css('opacity','0.7')
+            $('.fufu').css('opacity','0.7')
             break;
         case 4:
             update_stage('1');
@@ -50,7 +53,7 @@ function what(tick) {
             $('.nav[index=3]').toggleClass('selected');
             break;
         case 13:
-            highelems([8, 29, 12, 25, 11, 7, 15, 24])
+            highelems([8, 29, 12, 25, 11, 7, 15, 24]);
             break;
         case 14:
             highelems([8, 29, 12, 25, 11, 7, 15, 24, 21, 5]);

@@ -2,13 +2,16 @@
 .hum {
 
     stroke: #e2d509 !important;
+    stroke-width: 5px !important;
 }
 
 #fig_main::-webkit-scrollbar {
     display: none;
 }
 
-#fig_main::-webkit-scrollbar { width: 0 !important }
+#fig_main::-webkit-scrollbar {
+    width: 0 !important
+}
 
 #fig_main {
     scrollbar-width: none;
@@ -31,6 +34,7 @@
 .fufu {
 
     stroke: #19c157 !important;
+    stroke-width: 5px !important;
 }
 
 .traj path {
@@ -69,6 +73,7 @@ a {
     /*stroke: #e72444 !important;*/
     opacity: 1 !important;
     stroke-width: 4px !important;
+
 }
 
 .hiddensgrp rect:hover {
@@ -86,7 +91,7 @@ a {
         display: inline-block;*/
     user-select: none;
     outline: none;
-    padding: 5px 11px;
+    padding: 2px 14px;
 }
 
 .cell {
@@ -98,6 +103,8 @@ a {
 
 .selected {
     border: solid #a92234 2px !important;
+    background-color: rgba(255, 153, 165, 0.35);
+    color: #141414;
 }
 
 .play:hover {
