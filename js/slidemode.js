@@ -8,6 +8,10 @@ function what(tick) {
             $('#fig_main').css('visibility', 'visible');
             break;
         case 1:
+            $('.hum').toggleClass('traj-sel');
+            $('.traj path').css('stroke-width', '0.3px')
+            $('.hum').css('opacity', '0.6')
+            $('.fufu').css('opacity', '0.6')
             timer = setInterval(manege, 115);
             break;
         case 2:
@@ -15,9 +19,10 @@ function what(tick) {
             break;
         case 3:
             meta_change('diy/red28_-1.json', [28, -1]);
-            $('.traj path').css('stroke-width','0.3px')
-            $('.hum').css('opacity','0.7')
-            $('.fufu').css('opacity','0.7')
+/*            $('.traj path').css('stroke-width', '0.3px')
+            $('.hum').css('opacity', '0.6')
+            $('.fufu').css('opacity', '0.6')*/
+            $('.hum').toggleClass('traj-sel');
             break;
         case 4:
             update_stage('1');

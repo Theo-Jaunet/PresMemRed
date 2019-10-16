@@ -115,7 +115,7 @@ function show_sel(step) {
 
     d3.selectAll('.hsel rect').style('stroke-width', '2.2px');
     let st = [hst + (ve_w * curStep + (0.02 * curStep)), (tdata.hiddens[0].length * ve_h) + 22];
-    d3.select('#nlink').attr('points', "770," + (tool[2] - 121) + ",791," + (tool[2] - 121) + ", " + (st[0] + ve_w + 1.5) + "," + (st[1] + 10) + ", " + (st[0] + ve_w) + "," + (st[1]) + "," + (st[0]) + "," + st[1] + ", " + (st[0] - 1.5) + "," + (st[1] + 10))
+    d3.select('#nlink').attr('points', "770," + (tool[2] - 121) + ",791," + (tool[2] - 121) + ", " + (st[0] + (ve_w/2) + 5.5) + "," + (st[1] + 8) + ", " + (st[0] -1.5 +(ve_w/2)+1.5) + "," + (st[1]-1) + "," + (st[0] +(ve_w/2)-1.5) + "," + (st[1]-1) + ", " + (st[0] + (ve_w/2)- 5.5 ) + "," + (st[1] + 8))
 }
 
 

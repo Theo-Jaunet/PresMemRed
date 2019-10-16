@@ -31,7 +31,6 @@ function draw_traj(data, svg, width, height, cs, cla) {
 
         let g = svg.select('.traj');
 
-
         let tbg = g.append("path")
             .data([data])
             .attr("d", line)
@@ -224,8 +223,8 @@ function draw_agent_path(svg, pos, or) {
             .attr('d', "M 30.8,16.6 0.8,30.8 10,16.6 0.8,0.8 Z")
             .attr('id', 'agent')
             .attr('fill', '#a92234')
-            .attr('stroke', '#555555')
-            .attr('stroke-width', '1')
+            .attr('stroke', '#1d1d1d')
+            .attr('stroke-width', '2')
             .attr('transform', 'translate(' + ((traj_x(pos[0]) - 15) + offx) + ',' + ((traj_y(pos[1]) - 15) + offy) + ') rotate(' + (360 - or) + ' ' + (15) + ' ' + (15) + ')')
 
 
