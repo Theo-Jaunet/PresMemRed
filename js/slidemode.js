@@ -19,9 +19,9 @@ function what(tick) {
             break;
         case 3:
             meta_change('diy/red28_-1.json', [28, -1]);
-/*            $('.traj path').css('stroke-width', '0.3px')
-            $('.hum').css('opacity', '0.6')
-            $('.fufu').css('opacity', '0.6')*/
+            /*            $('.traj path').css('stroke-width', '0.3px')
+                        $('.hum').css('opacity', '0.6')
+                        $('.fufu').css('opacity', '0.6')*/
             $('.hum').toggleClass('traj-sel');
             break;
         case 4:
@@ -61,6 +61,7 @@ function what(tick) {
             highelems([8, 29, 12, 25, 11, 7, 15, 24]);
             break;
         case 14:
+            point_elem(d3.select('#memcom'), [21, 5])
             highelems([8, 29, 12, 25, 11, 7, 15, 24, 21, 5]);
             break;
         case 15:
@@ -68,15 +69,19 @@ function what(tick) {
             break;
         case 16:
             update_stage('3');
+            point_elem(d3.select('#memcom'), [21, 5])
             highelems([8, 29, 12, 25, 11, 7, 15, 24, 21, 5]);
             break;
         case 17:
+            point_elem(d3.select('#memcom'), [21, 5, 10, 3, 0])
             highelems([8, 29, 12, 25, 11, 7, 15, 24, 21, 5, 10, 3, 0]);
             break;
         case 18:
             meta_switch(1);
+            highelems([8, 29, 12, 25, 11, 7, 15, 24, 21, 5, 10, 3, 0]);
             break;
         case 19:
+            d3.selectAll('.pointar').remove();
             d3.select('#svg_div').transition().duration(300).style('left', '-230px');
             d3.select('#inf').transition().duration(300).style('left', '630.2px');
             d3.select('#order').transition().duration(300).style('margin-left', '43.5px');
@@ -155,23 +160,31 @@ function whut(tick) {
             break;
         case 12:
             resetelems();
+
             break;
         case 13:
             highelems([8, 29, 12, 25, 11, 7, 15, 24]);
+            d3.selectAll('.pointar').remove();
             break;
         case 14:
             update_stage('3');
+            d3.selectAll('.pointar').remove();
             highelems([8, 29, 12, 25, 11, 7, 15, 24, 21, 5]);
+            point_elem(d3.select('#memcom'), [21, 5])
+
             break;
         case 15:
             meta_switch(0);
             break;
         case 16:
+            d3.selectAll('.pointar').remove();
+            point_elem(d3.select('#memcom'), [21, 5])
             highelems([8, 29, 12, 25, 11, 7, 15, 24, 21, 5]);
             break;
         case 17:
             update_stage('3');
             highelems([8, 29, 12, 25, 11, 7, 15, 24, 21, 5, 10, 3, 0]);
+            // point_elem(d3.select('#memcom'), [21, 5, 10, 3, 0])
             break;
         case 18:
             d3.select('#svg_div').transition().duration(300).style('left', '0')
@@ -181,6 +194,7 @@ function whut(tick) {
             update_stage('3');
             $('.selected').toggleClass('selected');
             $('.nav[index=3]').toggleClass('selected');
+            point_elem(d3.select('#memcom'), [21, 5, 10, 3, 0])
             meta_switch(1);
             break;
         case 19:

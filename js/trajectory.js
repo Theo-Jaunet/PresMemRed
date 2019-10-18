@@ -142,7 +142,7 @@ function place_items(svg, st) {
     g.append("svg:image")
         .attr('x', traj_x(-240) + offx + 1)
         .attr('y', traj_y(80) + offy - 26.5 + 1)
-        .attr('width', 29)
+        .attr('width', 49)
         .attr('height', 29)
         .attr('class', 'item')
         .attr("xlink:href", 'assets/soul.png');

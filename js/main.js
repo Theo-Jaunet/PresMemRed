@@ -236,7 +236,7 @@ function reportWindowSize() {
     tool[1] = tbbox.width;
     tool[2] = tbbox.height;
 
-    let traj_s = ((560 *850) / 1300);
+    let traj_s = ((560 * 850) / 1300);
 
     $('.traj').remove();
     $('.distrib').remove();
@@ -363,7 +363,7 @@ function draw_arrowV2(x, y, z, ind) {
     tool[0].append('text')
         .attr('x', x + 20)
         .attr('y', 219)
-        .attr('font-size','18')
+        .attr('font-size', '18')
         .text('Human');
 
 
@@ -379,7 +379,7 @@ function draw_arrowV2(x, y, z, ind) {
     tool[0].append('text')
         .attr('x', x + 22)
         .attr('y', 276)
-        .attr('font-size','18')
+        .attr('font-size', '18')
         .text('Full Memory');
 
 
@@ -395,34 +395,34 @@ function draw_arrowV2(x, y, z, ind) {
     tool[0].append('text')
         .attr('x', x + 22)
         .attr('y', 336)
-        .attr('font-size','18')
+        .attr('font-size', '18')
         .text('Current');
 
 
     tool[0].append('text')
         .attr('x', 135)
         .attr('y', 660)
-        .attr('font-size','20')
+        .attr('font-size', '20')
         .text('Input');
 
 
     tool[0].append('text')
-        .attr('x', x +46)
+        .attr('x', x + 46)
         .attr('y', 650)
-        .attr('font-size','18')
+        .attr('font-size', '18')
         .text('Image Processing');
 
 
     tool[0].append('text')
         .attr('x', x + 350)
         .attr('y', 650)
-        .attr('font-size','18')
+        .attr('font-size', '18')
         .text('Memory');
 
     tool[0].append('text')
         .attr('x', x + 472)
         .attr('y', 660)
-        .attr('font-size','18')
+        .attr('font-size', '18')
         .text('Output');
 }
 
@@ -541,3 +541,75 @@ onkeyup = function (e) {
         keymap[e.keyCode] = false;
     }
 };
+
+
+function point_elem(svg, ids) {
+
+
+
+
+    for (let i = 0; i < ids.length; i++) {
+        let g = svg.append('g').attr('class', 'pointar');
+
+        let y = (ve_h * ids[i]) + 15;
+
+        let x = 4;
+
+        let tpath = g.append('line')
+            .attr('class', 'pointli')
+            .attr('x1', 10)
+            .attr('x2', 10)
+            .attr('y1', 2.5)
+            .attr('y2', 40)
+            .attr('stroke', '#183d4e')
+            .attr("stroke-linejoin", "round")
+            .attr('stroke_width', '10');
+
+
+        let totalLength = tpath.node().getTotalLength();
+
+        tpath.attr("stroke-dasharray", totalLength + " " + totalLength)
+            .attr("stroke-dashoffset", totalLength)
+            .transition()
+            .duration(1000)
+            .attr("stroke-dashoffset", 0);
+
+        tpath = g.append('line')
+            .attr('class', 'pointli')
+            .attr('x1', 12)
+            .attr('x2', -2)
+            .attr('y1', 2.5)
+            .attr('y2', 11.5)
+            .attr('stroke', '#183d4e')
+            .attr("stroke-linejoin", "round")
+            .attr('stroke_width', '4');
+
+
+        tpath.attr("stroke-dasharray", totalLength + " " + totalLength)
+            .attr("stroke-dashoffset", totalLength -3)
+            .transition()
+            .duration(2000)
+            .attr("stroke-dashoffset", 0);
+
+        tpath = g.append('line')
+            .attr('class', 'pointli')
+            .attr('x1', 8)
+            .attr('x2', 22)
+            .attr('y1', 2.5)
+            .attr('y2', 11.5)
+            .attr("stroke-linejoin", "round")
+            .attr('stroke', '#183d4e')
+            .attr('stroke_width', '4');
+
+
+        tpath.attr("stroke-dasharray", totalLength + " " + totalLength)
+            .attr("stroke-dashoffset", totalLength -3)
+            .transition()
+            .duration(2000)
+            .attr("stroke-dashoffset", 0);
+
+        g.attr('transform', 'translate(' + x + ',' + (y + 4) + ') rotate(' + 270 + ' ' + 4 + ' ' + 6.25 + ')')
+    }
+
+
+}
