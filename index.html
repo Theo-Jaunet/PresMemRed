@@ -43,6 +43,7 @@
     <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="css/custom.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
     <script src="https://d3js.org/d3.v5.min.js"></script>
 
     <script src="js/rough.js"></script>
@@ -50,21 +51,25 @@
 </head>
 <body style="overflow-y: hidden">
 
-<div style="position: absolute; min-width: 1245px; margin-left: auto;margin-right: auto;left: 0;right: 0;max-width: 1500px;text-align: center" id="intro">
+<div style="position: absolute; min-width: 1245px; margin-left: auto;margin-right: auto;left: 0;right: 0;max-width: 1500px;text-align: center"
+     id="intro">
     <div style="margin-top:30px "><h2>What if we Reduce the Memory of an Artificial Doom Player?</h2></div>
     <img src="assets/demo.gif" style="width: 80%;margin-top: 25px; height: auto">
-    <div style="font-size: 26pt;margin-top: 15px">Check it at: <span style="text-decoration: underline">theo-jaunet.github.io/MemoryReduction</span></div>
+    <div style="font-size: 26pt;margin-top: 15px">Check it at: <span style="text-decoration: underline">theo-jaunet.github.io/MemoryReduction</span>
+    </div>
 
 </div>
 
 
 <!-- Primary Page Layout
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<div class="container" style="position: relative; min-width: 1245px;padding: 0; visibility: hidden;  scrollbar-width: none;height: 1000px;overflow-y: hidden" id="fig_main">
+<div class="container"
+     style="position: relative; min-width: 1245px;padding: 0; visibility: hidden;  scrollbar-width: none;height: 1000px;overflow-y: hidden"
+     id="fig_main">
 
-<svg style="position: absolute; width: 300px;height:643px;top:128px;right: -112px " id="memcom">
+    <svg style="position: absolute; width: 300px;height:643px;top:128px;right: -112px " id="memcom">
 
-</svg>
+    </svg>
     <div class="row" style="margin-top: 12px;max-width: 1600px">
         <div class="seven  columns" style="position: relative;width: 650px">
             <h5> What if we Reduce the Memory of an Artificial Doom Player?</h5>
@@ -78,7 +83,8 @@
             <p id="order" style="max-height: 100px;width: 490px;margin-top: 10%;margin-left: 157.5px">
 
 
-                <img src="assets/armorGreen.png" class="item-icon" height="57px"> <img src="assets/arrow.png" class="arrow-icon">
+                <img src="assets/armorGreen.png" class="item-icon" height="57px"> <img src="assets/arrow.png"
+                                                                                       class="arrow-icon">
                 <img src="assets/armorRed.png" class="item-icon"> <img src="assets/arrow.png" class="arrow-icon">
                 <img src="assets/hp.png" class="item-icon"> <img src="assets/arrow.png" class="arrow-icon">
                 <img src="assets/soul.png" class="item-icon" style="width: 36px">
@@ -87,13 +93,15 @@
 
         </div>
         <div class="five columns" style="margin-left: -6px; width: 600px">
-            <div class=" nav left-card-arr button" style="display:none; vertical-align: bottom;"><p style="padding: 13px 0px"> < </p></div>
+            <div class=" nav left-card-arr button" style="display:none; vertical-align: bottom;"><p
+                    style="padding: 13px 0px"> < </p></div>
             <div index="0" class=" nav selected card button"><p> Full Memory <br> (no reduction) </p></div>
             <div index="1" class=" nav card button"><p>Random <br> Reductions</p></div>
             <div index="2" class=" nav card button"><p>Top Elements <br> only</p></div>
             <div index="3" class=" nav card button"><p>Selection of <br> Reductions</p></div>
             <div index="4" class=" nav card button"><p>Do it <br>Yourself</p></div>
-            <div class=" nav right-card-arr button" style="display:none;"><p style="padding: 13px 0px;font-weight: 700"> > </p></div>
+            <div class=" nav right-card-arr button" style="display:none;"><p style="padding: 13px 0px;font-weight: 700">
+                > </p></div>
         </div>
     </div>
     <div style="width: 360px;position: absolute;right: 22px;top: 86px">
@@ -105,16 +113,20 @@
         <!--style="cursor:pointer;position: absolute;right: 28px;bottom: 12px;z-index: 777"><a>Next <img src="assets/arrow.png" class="arrow-icon"> </a>-->
         <!--</div>-->
         <div id="credits" style="visibility: hidden;margin-top: 100px;margin-left: 100px">
-            <h5><span style="text-decoration:underline;font-weight: 500">Théo Jaunet</span><br>LIRIS, INSA-Lyon (France) </h5>
+            <h5><span style="text-decoration:underline;font-weight: 500">Théo Jaunet</span><br>LIRIS, INSA-Lyon (France)
+            </h5>
             <h5><span style="font-weight: 500">Romain Vuillemot </span><br>LIRIS, Ecole Centrale de Lyon (France) </h5>
             <h5><span style="font-weight: 500">Christian Wolf </span><br>LIRIS, INSA-Lyon, CITI, INRIA (France) </h5>
         </div>
 
     </div>
 
-    <div class=" row" style="max-height: 665px;position: absolute;top:120px;text-align: center;margin-left: auto;margin-right: auto;left: 0;right: 0" id="svg_div">
+    <div class=" row"
+         style="max-height: 665px;position: absolute;top:120px;text-align: center;margin-left: auto;margin-right: auto;left: 0;right: 0"
+         id="svg_div">
 
-        <div style="width: 35px;height: auto;display: inline-block;margin-right: 20px;position: absolute;left: 515.7px;top: 1.6px;z-index: 50;margin-left: 122.5px" id="inf">
+        <div style="width: 35px;height: auto;display: inline-block;margin-right: 20px;position: absolute;left: 515.7px;top: 1.6px;z-index: 50;margin-left: 122.5px"
+             id="inf">
             <!--<img class="play" style="width: 29px;position: absolute;left: 90px;top:-53px" src="assets/play-sign.svg">-->
             <input id="timebar" type="range" min="0" max="66" step="1" value="0"
                    style="width: 407.5px;position: absolute;top: -6px;left: 11.9px">
@@ -139,7 +151,8 @@
                     </linearGradient>
                 </defs>
             </svg>
-            <div style="font-size: 21pt;margin-top: 24px">Check it at: <span style="text-decoration: underline">theo-jaunet.github.io/MemoryReduction</span></div>
+            <div style="font-size: 21pt;margin-top: 24px">Check it at: <span style="text-decoration: underline">theo-jaunet.github.io/MemoryReduction</span>
+            </div>
         </div>
 
     </div>
@@ -277,6 +290,8 @@
 </div>-->
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
 </body>
 
 <script src="js/utils.js"></script>

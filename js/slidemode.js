@@ -23,39 +23,49 @@ function what(tick) {
                         $('.hum').css('opacity', '0.6')
                         $('.fufu').css('opacity', '0.6')*/
             $('.hum').toggleClass('traj-sel');
+            curStep =0;
             break;
         case 4:
             update_stage('1');
             $('.selected').toggleClass('selected');
             $('.nav[index=1]').toggleClass('selected');
+            curStep =0;
             break;
         case 5:
             meta_switch(3);
+            curStep =0;
             break;
         case 6:
             meta_switch(10);
+            curStep =0;
             break;
         case 7:
             update_stage('2');
             $('.selected').toggleClass('selected');
             $('.nav[index=2]').toggleClass('selected');
+            curStep =0;
             break;
         case 8:
             meta_switch(0);
+            curStep =0;
             break;
         case 9:
             meta_switch(1);
+            curStep =0;
             break;
         case 10:
             meta_switch(2);
+            curStep =0;
             break;
         case 11:
             meta_switch(3);
+            curStep =0;
             break;
         case 12:
             update_stage('3');
             $('.selected').toggleClass('selected');
             $('.nav[index=3]').toggleClass('selected');
+            curStep =0;
             break;
         case 13:
             highelems([8, 29, 12, 25, 11, 7, 15, 24]);
@@ -66,11 +76,13 @@ function what(tick) {
             break;
         case 15:
             meta_switch(0);
+            curStep =0;
             break;
         case 16:
             update_stage('3');
             point_elem(d3.select('#memcom'), [21, 5])
             highelems([8, 29, 12, 25, 11, 7, 15, 24, 21, 5]);
+            curStep =0;
             break;
         case 17:
             point_elem(d3.select('#memcom'), [21, 5, 10, 3, 0])
@@ -78,6 +90,7 @@ function what(tick) {
             break;
         case 18:
             meta_switch(1);
+            curStep =0;
             highelems([8, 29, 12, 25, 11, 7, 15, 24, 21, 5, 10, 3, 0]);
             break;
         case 19:
@@ -93,9 +106,11 @@ function what(tick) {
             break;
         case 20:
             meta_change('diy/red0_-1.json', [0, -1]);
+            curStep =0;
             break;
         case 21:
             meta_change('diy/red5_23.json', [5, 23]);
+            curStep =0;
             break;
     }
 
@@ -120,43 +135,54 @@ function whut(tick) {
             break;
         case 2:
             update_stage('0');
+            curStep =0;
             highelems([28]);
             break;
         case 3:
             update_stage('0');
+            curStep =0;
             meta_change('diy/red28_-1.json', [28, -1]);
             $('.selected').toggleClass('selected');
             $('.nav[index=0]').toggleClass('selected');
             break;
         case 4:
             update_stage('1');
+            curStep =0;
             break;
         case 5:
             meta_switch(3);
+            curStep =0;
             break;
         case 6:
             update_stage('1');
+
             $('.selected').toggleClass('selected');
             $('.nav[index=1]').toggleClass('selected');
             meta_switch(10);
+                     curStep =0;
             break;
         case 7:
             update_stage('2');
+                     curStep =0;
             break;
         case 8:
             meta_switch(0);
+                     curStep =0;
             break;
         case 9:
             meta_switch(1);
+                     curStep =0;
             break;
         case 10:
             meta_switch(2);
+                     curStep =0;
             break;
         case 11:
             update_stage('2');
             $('.selected').toggleClass('selected');
             $('.nav[index=2]').toggleClass('selected');
             meta_switch(3);
+                     curStep =0;
             break;
         case 12:
             resetelems();
@@ -170,11 +196,13 @@ function whut(tick) {
             update_stage('3');
             d3.selectAll('.pointar').remove();
             highelems([8, 29, 12, 25, 11, 7, 15, 24, 21, 5]);
-            point_elem(d3.select('#memcom'), [21, 5])
+            point_elem(d3.select('#memcom'), [21, 5]);
+                     curStep =0;
 
             break;
         case 15:
             meta_switch(0);
+                     curStep =0;
             break;
         case 16:
             d3.selectAll('.pointar').remove();
@@ -184,6 +212,7 @@ function whut(tick) {
         case 17:
             update_stage('3');
             highelems([8, 29, 12, 25, 11, 7, 15, 24, 21, 5, 10, 3, 0]);
+                     curStep =0;
             // point_elem(d3.select('#memcom'), [21, 5, 10, 3, 0])
             break;
         case 18:
@@ -196,15 +225,19 @@ function whut(tick) {
             $('.nav[index=3]').toggleClass('selected');
             point_elem(d3.select('#memcom'), [21, 5, 10, 3, 0])
             meta_switch(1);
+                     curStep =0;
             break;
         case 19:
             update_stage('4');
+                     curStep =0;
             break;
         case 20:
             meta_change('diy/red0_-1.json', [0, -1]);
+                     curStep =0;
             break;
         case 21:
             meta_change('diy/red5_23.json', [5, 23]);
+                     curStep =0;
             break;
     }
 
